@@ -63,8 +63,8 @@
 //Note			          Duration		No. of Interrupts
 //QUAVER		          125 ms			1
 //QUARTER		          250 ms			1
-//SEMI_QUAVER	 	      62 ms			  1
-//DEMI_SEMI_QUAVER	  31 ms		  	1
+//SEMI_QUAVER	 	          62 ms		                1
+//DEMI_SEMI_QUAVER	          31 ms		  	        1
 
 //11059200 ÷ 12 = 921600  //1000 ms
 //921600 ÷ 8 = 115200  //125 ms
@@ -106,9 +106,9 @@ const unsigned int melodyDura[161] = {
          th8, th16, th16, th16, th16, th8,            th8, th16, th16, th16, th16, th32, th16, th16,                         th8, th16, th16,  th16, th16, th16, th16,           th4, th4,
         
 	 th8, th16, th16, th16, th16, th8,            th4, th4,                                                              th8,  th16, th16, th16, th16, th8,              	 th4, th4,
-         th8, th16, th16, th16, th16, th8,            th8, th16, th16, th16, th32, th32, th16, th16,                    th8,  th16, th16, th16, th16, th16, th16,      	 th4, th4,
+         th8, th16, th16, th16, th16, th8,            th8, th16, th16, th16, th32, th32, th16, th16,                         th8,  th16, th16, th16, th16, th16, th16,      	 th4, th4,
          th8, th16, th16, th16, th16, th8,            th4, th4,                                                              th8,  th16, th16, th16, th16, th8,             	 th4, th4,
-         th8, th16, th16, th16, th16, th8,            th8, th16, th16, th16, th32, th32, th16, th16,                    th8,  th16, th16, th16, th16, th16, th16,           th4, th4 };
+         th8, th16, th16, th16, th16, th8,            th8, th16, th16, th16, th32, th32, th16, th16,                         th8,  th16, th16, th16, th16, th16, th16,           th4, th4 };
 
 void playMelody(unsigned char index);
 void stop(void);

@@ -1,0 +1,7 @@
+Blinking 8 LEDs on Port A of STC89C516RD+.
+
+Tested environment:
+1. Platform: VMware + Ubuntu 22.04 LTS + Windows 10
+2. MCU: STC89C516RD+.
+3. Compiler: SDCC
+4. Programmer: stcgal + CH430

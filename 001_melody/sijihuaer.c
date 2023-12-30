@@ -119,10 +119,10 @@ unsigned int getTicks(void);
 
 //PROGRAMMABLE CLOCK OUT
 __sfr __at(0x80) PORT1; //A 50% duty cycle clock can be programmed to come out on P1.O.
-		     //This pin, besides being a regular I/O pin, has two alternate functions. 
-		     //It can be programmed (1) to input the external clock for Timer/Counter 2 
-		     //or (2) to output a 50% duty cycle clock ranging from 61 Hz
-		     //to 4 MHz at a 16 MHz operating frequency.
+		        //This pin, besides being a regular I/O pin, has two alternate functions. 
+		        //It can be programmed (1) to input the external clock for Timer/Counter 2 
+		        //or (2) to output a 50% duty cycle clock ranging from 61 Hz
+		        //to 4 MHz at a 16 MHz operating frequency.
 __sbit __at(0x80^0) BEEP; //Beep connected to pin 1.0
 
 //Timer0 used for note qurations:
@@ -186,23 +186,23 @@ void main(void)
 {
   // Config timer0 for 11.0592 Mhz default SYSCLK
   // 11059200/256/256=168.75 ticks per second
-	// 1ms = 1000/168.75 = 5.9259... = 6 ticks
+  // 1ms = 1000/168.75 = 5.9259... = 6 ticks
 
 	TMOD = 0x02; //Timer0 in Mode 2 - Overtlow from TLx not only sets TFx, but also reloads TLx with the ecmtentsof THx.
 	TH0 = 0x05;  //250; 
-  IE = 0x82;   //EA IE.7 EA = 1, Enables all interrupts.
-               //ET0 IE.1 Timer 0 interrupt enable bit.
+        IE = 0x82;   //EA IE.7 EA = 1, Enables all interrupts.
+                     //ET0 IE.1 Timer 0 interrupt enable bit.
 
   // Config timer2 for 11.0592 Mhz default SYSCLK
-	// A 50% duty cycle clock can be programmed to come out on P1.O.This pin, besides being a regular 1/0 pin,
-	// has two alternate functions. It can be programmed (1) to input the external clock for Timer/Counter 2 or (2)
-	// to output a so~o duty cycle clock ranging from 61 Hz to 4 MHz at a 16 MHz operating frequency.
-	// To configure the Timer/Counter 2 as a clock generator,bit C/T2 (in T2CON) must be cleared end bit T20E in
-	// T2MOD must be set. Bit TR2 (T2CON.2) also must be set to start the timer (see Table 6 for operating modes).
+  // A 50% duty cycle clock can be programmed to come out on P1.O.This pin, besides being a regular 1/0 pin,
+  // has two alternate functions. It can be programmed (1) to input the external clock for Timer/Counter 2 or (2)
+  // to output a so~o duty cycle clock ranging from 61 Hz to 4 MHz at a 16 MHz operating frequency.
+  // To configure the Timer/Counter 2 as a clock generator,bit C/T2 (in T2CON) must be cleared end bit T20E in
+  // T2MOD must be set. Bit TR2 (T2CON.2) also must be set to start the timer (see Table 6 for operating modes).
   // 11059200/32/256=1350 ticks per second
   // Time2 run in 0 mode
   //T2CON |= 0x04;   //TR2 T2CON.2 must be set to start Timer2
-	//C/T2 T2CON.1 must be cleared (OSC/2 in baud rate generator mod)
+  //C/T2 T2CON.1 must be cleared (OSC/2 in baud rate generator mod)
 	T2MOD = 0x02;  //T2OE T2MOD.1 - Timer2 Output Enable
 	
 	//The Clock-out frequency depends on the oscillator frequency 

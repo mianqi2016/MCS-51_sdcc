@@ -1,4 +1,2 @@
 Circuit: 
-	5v - speaker(8ohm) - Collector/SS8050 - GND; 
-	P1.0 - 1Kohm - Base/SS8050 - SS8050; 
-	Base/SS8050 - 10Kohm -GND.
+8 LEDs connected to Port 1 via 1.5 Kohm each.

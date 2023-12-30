@@ -209,12 +209,12 @@ void main(void)
 	//and the reload value of Timer 2 capture registers (RCAP2H, RCAP2L) as shown in this equation:
 	//Clock-out Frequency = Oscillator Frequency / (4 × (65536 - RCAP2H,RCAP2L))
 
-  while(1)
+	while(1)
         {
-		    for(unsigned char i = 0; i < 161; ++i)
-            {
-              playMelody(i);
-            }
+    		for(unsigned char i = 0; i < 161; ++i)
+            	{
+              		playMelody(i);
+           	}
         }   
 }
 
@@ -228,7 +228,7 @@ void playMelody(unsigned char index)
 void stop(void)
 {
 	ticks = 0;
-  T2CON = 0x00;   //TR2 T2CON.2 must be set to start Timer
+  	T2CON = 0x00;   //TR2 T2CON.2 must be set to start Timer
 	TCON = 0x00; //TimerO Run control bit. Set/cleared by software to turn Timer/ConterO on/off.
 }
 
@@ -245,7 +245,7 @@ void setTone(unsigned char index)
 void play(unsigned char index)
 {
 	unsigned int dura = melodyDura[index];
-  T2CON = 0x04;   //TR2 T2CON.2 must be set to start Timer2
+  	T2CON = 0x04;   //TR2 T2CON.2 must be set to start Timer2
 	TCON = 0x10; //TimerO Run control bit. Set/cleared by software to turn Timer/ConterO on/off.
 	while(getTicks() < dura);
 }

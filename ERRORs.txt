@@ -1,0 +1,20 @@
+Here are some ridiculous but really accured errors in using SDCC:
+
+MCU: STC89C516RD+
+Platform: Ubuntu
+Programmer: stcgal
+
+1. There should be "__" before "at(0xxx)" after "__sfr".
+2. There shouldn't be any expression outside "main()".
+3. There should be ";" after array definition.
+4. There shouldn't be "{}" after function prototype name in header file.
+5. "--std-sdccxx" is not needed for "syntax error: token -> 'void', normally there ought to be other reason for this.
+6. Array shouldn't be defined by mixing elements with comments:
+  returned type array[] = {
+	element1, //comment1
+	element2, //comment2
+	element3, //comment3
+	...
+	}
+7. Is "P2_2" defined by "__sbit" not "P2.2"
+8. 

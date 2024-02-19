@@ -17,4 +17,7 @@ Programmer: stcgal
 	...
 	}
 7. Is "P2_2" defined by "__sbit" not "P2.2"
-8. 
+8. When met "?ASlink-Warning-Undefined Global '_key4Pressed' referenced by module 'main'
+", try "sdcc -c main.c" - -c  --compile-only        Compile and assemble, but do not link
+9. There is ";" at the end of "__sbit ..." and "__sfr ..."
+10. 

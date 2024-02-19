@@ -23,4 +23,5 @@ Programmer: stcgal
 10. "warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
 warning 126: unreachable code" may because lackness of ";" or "=" shoule be "==" here before.
 11. "return (variable)i" would not trigging warning in SDCC.
-12.
+12. "syntax error: token -> '=' ; " may because "T2MON=0x00;" likes expression shouldn't outside any function prototype in header file, it could be added in main().
+13. 

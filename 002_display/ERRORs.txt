@@ -22,3 +22,5 @@ Programmer: stcgal
 9. There is ";" at the end of "__sbit ..." and "__sfr ..."
 10. "warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
 warning 126: unreachable code" may because lackness of ";" here before.
+11. "return (variable)i" would not trigging warning in SDCC.
+12.

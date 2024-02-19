@@ -20,4 +20,5 @@ Programmer: stcgal
 8. When met "?ASlink-Warning-Undefined Global '_key4Pressed' referenced by module 'main'
 ", try "sdcc -c main.c" - -c  --compile-only        Compile and assemble, but do not link
 9. There is ";" at the end of "__sbit ..." and "__sfr ..."
-10. 
+10. "warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG
+warning 126: unreachable code" may because lackness of ";" here before.

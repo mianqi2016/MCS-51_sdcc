@@ -16,5 +16,6 @@ Programmer: stcgal
 	element3, //comment3
 	...
 	}
-7. Is "P2_2" defined by "__sbit" not "P2.2"
-8. 
+7. It is "P2_2" defined by "__sbit" not "P2.2"
+8. 2-D array declared as default zeros, explicit zeros would be prompted as error.
+9.There are 2 "_" before "asm" and "endasm" for in-line asm code, and there is a ";" after "__endasm".
